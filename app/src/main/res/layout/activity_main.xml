@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/dp_10"
+    tools:context=".MainActivity"
+    >
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/button_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_service"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="245dp"
+        />
+    <Button
+        android:onClick="onClick"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@id/button_start"
+        android:id="@+id/button_Bound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bound_service"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="341dp"
+        />
+</RelativeLayout>

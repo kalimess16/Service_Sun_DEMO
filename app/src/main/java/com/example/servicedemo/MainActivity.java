@@ -1,11 +1,9 @@
 package com.example.servicedemo;
 
 import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,11 +14,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        Intent intent = new Intent(this,ExamService.class);
-        if (view.getId() == R.id.button_start) {
-            startService(intent);
-        } else {
-            Toast.makeText(this, "Bound", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, StartService.class);
+        Intent intentBound = new Intent(this, BoundService.class);
+        Intent intentBoth = new Intent(this, BothS_B.class);
+        switch (view.getId()) {
+            case R.id.button_start:
+                startActivity(intent);
+                break;
+            case R.id.button_Bound:
+                startActivity(intentBound);
+                break;
+            default:
+                startActivity(intentBoth);
+                break;
         }
     }
 }

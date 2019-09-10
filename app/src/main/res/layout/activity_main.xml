@@ -32,4 +32,16 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="341dp"
         />
+    <Button
+        android:onClick="onClick"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@id/button_Bound"
+        android:id="@+id/button_both"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/both"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="341dp"
+        />
 </RelativeLayout>
